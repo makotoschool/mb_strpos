@@ -1,0 +1,33 @@
+/*
+↓これはclear:bothを書ける箱がない時用に
+疑似要素で箱作ってそれにclear:both書いてる
+*/
+
+.clearfix:after{
+content:".";
+display:block;
+height:0px;
+clear:both;
+visibility:hidden;
+
+}
+/*↑ここまで */
+
+.songs{
+min-height:200px;
+margin-bottom:20px;
+border:2px solid #ccc;
+}
+
+
+/*写真以外いらない作戦*/
+
+.songs p table tr:first-child > td table tr td:last-child{
+display:none;
+}
+
+.songs p table tr:first-child > td table tr td:first-child{
+text-align:left;
+}
+
+
